@@ -6,7 +6,7 @@
     <title>Hampter</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
-    <link rel="icon" type="image/x-icon" href="images/hampter.png">
+    <link rel="icon" type="image/x-icon" href="images/icons/hampter.png">
 </head>
 <body>
     <div class="topbar">
@@ -14,38 +14,183 @@
     </div>
 
     
-    <div class="container">
-        <div>
+    <div class="navbutton-container topbar">
+        <button id="page1btn">About Hamsters</button>
+        <button id="page2btn">Hamster Essentials </button>
+        <button id="page3btn">Hamster Content</button>
+    </div>
+    
 
-            <div class="content">
+    <div class="page" id="page1">
+       
+        <div class="container content">       
+
+          
                 
-                <div class="left" id="about">
-                    <h3> About Hamsters </h3>
+                <div class="right" >
+                    <h2> About Hamsters </h2>
                     <p>  Hamsters are small rodents belonging to the subfamily Cricetinae.They are native to parts of Europe and Asia. These adorable creaturesare popular as pets due to their small size and cute appearance.</p>
                 </div>
                 
-                <div class="right" id="about">
-                    <h3> Types of Hamsters </h3>
-                    <p>  Hamsters are small rodents belonging to the subfamily Cricetinae.They are native to parts of Europe and Asia. These adorable creaturesare popular as pets due to their small size and cute appearance.</p>
+                <div class="left">
+                    <h3> Types Of Hamsters </h3>
+                    <p>  If you're thinking about getting a hamster, these adorable little creatures make fun, entertaining pets. There are 24 hamster species, however, five are the most commonly kept as pets. Some hamster species make perfect solo pets, while others are comfortable living in a group. If you're looking for a hamster to hold and interact with, some breeds are better suited for handling while others prefer to play on their own.</p>
                     <details>
-
-                        <button onclick="changeContent('Winter White Hamster', 'image1.jpg')">Winter White Hamster</button>
-                        <button onclick="changeContent('Syrian Hamster', 'image2.jpg')">Syrian Hamster</button>
-                        <button onclick="changeContent('Campbell’s Dwarf Hamster', 'image3.jpg')">Campbell’s Dwarf Hamster</button>
-                        <button onclick="changeContent('Roborovski Hamster', 'image4.jpg')">Roborovski Hamster</button>
-                        <button onclick="changeContent('Chinese Hamster', 'images/chinese_hamster.png', 'Chinese Hamster: This is a small and friendly hamster breed.')">Chinese Hamster</button>
                         <summary>Show more</summary>
-                        <img id="hamsterImage" src="default-image.jpg" alt="Hamster">
+                        <div class="button-container summary-content">
+                        <button class="custom-button" onclick="changeContent('Winter White Hamster')">Winter White Hamster</button>
+                        <button class="custom-button" onclick="changeContent('Syrian Hamster')">Syrian Hamster</button>
+                        <button class="custom-button" onclick="changeContent('Campbell’s Dwarf Hamster')">Campbell’s Dwarf Hamster</button>
+                        <button class="custom-button" onclick="changeContent('Roborovski Hamster')">Roborovski Hamster</button>
+                        <button class="custom-button" onclick="changeContent('Chinese Hamster')">Chinese Hamster</button>
+                        </div>
+                        <img id="hamsterImage" src="images/hamsters/sillouette_hamster.jpg" alt="Hamster type">
                         <h3>Hamster Traits</h3>
-                        <p id= "hamsterDescription"> </p>
+                        
+                        <p id="hamsterDescription"></p>
+                     
                     </details>
                 </div>
-            </div>
-     
+        
+        </div>
+    </div>  
+   
 
-        <div class="content">
+    
+    <div class="page" id="page2">
+        <div class="container content">
+            <div class="left">
+                <h3> Essential Items For Hamsters </h3>
+                <p>  Although hamsters are easy and low maintenance pets, there are various important items a hamster needs to have in order to be happy and well taken care of.</p>
+            </div>
+
+            <div class="odd">
            
+                <div class="image-gallery image-container">
+                    
+                    <div class="gallery-nav">
+                        <button onclick="changeImage(-1)">&lt;</button>
+                        <img id="galleryImage" src="images/bedding/aspen_shavings.jpg" alt="bedding types">
+                        <button onclick="changeImage(1)">></button>
+                      </div>
+                </div>
+            
+
+                <div class="description-container">
+                    <h3> Bedding </h3>
+                    <p>Bedding is important as it allows for thr hamster to naturally burrow and create comfortable spaces, it is also used to absorb the urine of the hamster. Popular and effective bedding includes, Paaper Litter, Aspen Shavings, Paper Pellets, Thimothy Hay</p>
+                </div>
+
+            </div>
+
+            <div class="even">
+            
+                <div class="description-container">
+                    <h3> Sand Bath</h3>
+                    <p>They love rolling, digging, and even playing in smooth, clean, sand as it helps “bathe” their skin and coat in a non-traditional way. Sand baths help decrease natural oils and dirt that may have accumulated in your hamster's coat. They may also deter parasites.22</p>
+                </div>
+
+                <div class="image-gallery image-container">
+                    
+                    <div class="gallery-nav">
+                       
+                        <img src="images/amenities/sand_bath.jpg" alt="sand bath">
+                        
+                      </div>
+                </div>
+            </div>
+
+            <div class="odd">
+                <div class="image-gallery image-container">
+                    
+                    <div class="gallery-nav">
+                    
+                    <img src="images/amenities/hamster_hideout.jpg" alt="hamster hideout">
+                    
+                    </div>
+                
+                </div>
+            
+
+                <div class="description-container">
+                    <h3> Hideouts</h3>
+                    <p>Your hamster may hide in a corner to sleep, burrow or if it is stressed, but have you asked yourself why it chooses to hide in the corner of its cage. The answer is simple really. Corners provide more safety and as prey animals they instinctively look to protect themselves. .</p>
+                </div>
+
+            </div>
+
+            <div class="even">
+             
+                <div class="description-container">
+                    <h3> Hamster Wheel </h3>
+                    <p>In their natural environment, hamsters live in elaborate underground burrowing systems, constantly scurrying from one end to another. Exercise wheels help provide domesticated hamsters with aerobic activity to mimic this behavior. Some hamsters will run up to five miles a night on their exercise wheels.</p>
+                </div>
+
+                <div class="image-gallery image-container">
+                    
+                    <div class="gallery-nav">
+                       
+                        <img src="images/amenities/hamster_wheel.jpg" alt="hamster_wheel">
+                        
+                      </div>
+                </div>
+            </div>
+
+
+            </div>
+          
+        </div>
+            
+         
+           
+
+
+
+            
+    <div class="page" id="page3">
+                
+        <div class="container content">
+            <div class="right">
+                <h3> Informative Videos </h3>
+                <p>Still curious and want to learn more about hamsters? Here are some informative videos to learn more about hamsters and discover how to take excellent care of these adorable pets.   </p>
+                
+            </div>
+            
+            <section class="video">
+                
+                <div class="left">
+                    <h3>Vidoes </h3>
+                    </div>
+         
+        
+                <iframe src="https://www.youtube.com/embed/_yozK-jeB04" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/M6t5y06wsng" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        
+                <iframe src="https://www.youtube.com/embed/jOGC4a0gxwk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/Sn2xo5CMX34" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+            </section>
+             
+                <div class="right">
+                    <h3> Funny Hamster Vidoes </h3>
+                    <p>Like other animals, hamster also do get up to mischief! Here are some funny clips of hamsters you NEED to see! </p>
+    
+                </div>
+
+            <section class="video">
+                <div class="left">
+                <h3>Vidoes </h3>
+                </div>
+                <iframe  src="https://www.youtube.com/embed/H0Yirlo6WSU" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe  src="https://www.youtube.com/embed/_gcWhYB0g6g" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe  src="https://www.youtube.com/embed/eRSfLR9v_7o" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe  src="https://www.youtube.com/embed/eXz_HCnzBAI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+               
+              
+            </section>
+              
         </div>
     </div>
 </body>
 </html>
+
