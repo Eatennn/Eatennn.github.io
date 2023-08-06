@@ -1,9 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-}
+
 
 
 body {
@@ -21,48 +16,119 @@ body {
     padding: 15px;
 }
 
-/* Dropdown Button */
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
+
+.navbar {
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+}
+
+.navbutton-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    padding: 10px 10px; /* Add padding for spacing */
+    
+  }
+  
+.navbutton-container button {
+
+    flex: 1 0 0; /* Allow buttons to grow and shrink equally */
+    max-width: 33.33%; /* Limit the maximum width of each button */
+    max-height: 33.33%; /* Limit the maximum width of each button */
+    font-size: 26px;
+    background-color: #f9c381;
+    color: #fff; /* Change the text color */
+    padding: 12px 24px; /* Adjust padding for better button size */
+    margin: 5px; /* Add some spacing between buttons */
     border: none;
     cursor: pointer;
+    border-radius: 8px; /* Add rounded corners to the buttons */
+    }
+
+button {
+    max-width: 80%;
+    font-size: 16px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+
+.video {
+    display: flex;
+    justify-content: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
   }
   
-  /* Dropdown button on hover & focus */
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
+  .video iframe {
+
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    border: 5px solid #555;
+    border-radius: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+ 
+    height:  30em; 
+    max-width: 100%; /* prevent exceed from container */
+  }
+
+
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+  
+.custom-button {  
+    background-color: #b1994c; /* Green background color */
+    color: white; /* Text color */
+    padding: 12px 20px; /* Padding around the text */
+    font-size: 16px; /* Font size of the text */
+    border: none; /* No border */
+    cursor: pointer; /* Show a pointer cursor on hover */
+    border-radius: 8px; /* Rounded corners */
   }
   
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
+  /* different background color on hover */
+  .custom-button:hover {
+    background-color: #d1be68;
   }
   
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  /* different background color when the button is clicked */
+  .custom-button:active {
+    background-color: #8e793e;
+  }
+
+  .summary-content {
+    overflow: hidden;
+    transition: max-height 0.8s ease; /* Adjust the duration as needed */
+    width: 100%;
   }
   
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
+
+.page {
+  display: none;
+  padding: 20px;
+  background-color: #e2d2be;
+}
+
+.page.show {
+  display: block;
+}
+
+
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
 
@@ -71,22 +137,29 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center; /* Center the items horizontally */
-    align-items: center; /* Center the items vertically */
     flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
     margin-top: -20px; /* Compensate for the topbar height */
+    background-color: #6f86c7;
 }
 
-
+.image-container {
+    flex: 1;
+    background-color: #d3e29c;
+  }
+  
+.description-container {
+    flex: 2;
+    background-color: #d387c0;
+}
 
 .content {
-    max-width: 800px;
     margin: 0 auto; /* Center the .content div horizontally */
     padding: 20px;
 }
 
 
 img {
-    max-width: 100%;
+    max-width: 80%;
     display: block;
     margin: 20px auto;
     border-radius: 10px;
@@ -115,10 +188,16 @@ p {
 
 .right {
     background-color: #ffddcc;
+    justify-content: center;
+    padding: 10px;
+    width: 100%; 
 }
 
 .left {
-    background-color: #cceeff;
+    background-color: #eebfae;
+    justify-content: center;
+    padding: 10px;
+    width: 100%; 
 }
 
 .right:nth-child(even) {
@@ -131,7 +210,123 @@ p {
   
 }
 
+.odd
+{
+    flex-direction: column;
+    margin: 0 auto; 
+    padding: 20px;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    flex-wrap: wrap; /* to the next line on smaller screens */
+    background-color: #6f86c7;
+}
+
+
+.even
+{
+    flex-direction: column;
+    margin: 0 auto; 
+    padding: 20px;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    flex-wrap: wrap; /*  to wrap to the next line on smaller screens */
+    background-color: #6f86c7;
+
+}
 
 .show {
     display: block;
 }
+
+
+
+
+.image-gallery {
+    flex: 1; /* Take the available width in the .odd container */
+    max-width: 600px; /* Set a maximum width for the .image-gallery */
+    margin: 0 auto; /* Center the .image-gallery horizontally */
+  }
+
+
+  .gallery-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .gallery-nav button {
+    flex: 1; /* Make the buttons take equal width */
+  }
+
+  .video-flex
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+@media screen and (max-width: 541px) 
+{
+    .navbutton-container button 
+    {
+        font-size: 14px;
+    }
+
+    .video iframe {
+       
+      width: 80%; 
+
+    }
+
+    .custom-button {
+        font-size: 14px;
+        padding: 10px 16px;
+      } 
+
+      .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons horizontally */
+      }
+
+      .odd, .even {
+        flex-direction: column;
+      }
+
+      .image-container {
+        order: 1; /* Change the order to 1 to make it appear first */
+      }
+    
+      .description-container {
+        order: 2; /* Change the order to 2 to make it appear second */
+      }
+
+      .image-container,
+      .description-container {
+        flex: 1;
+        /* Set both containers to take full width in mobile view */
+        
+      }
+    
+
+}
+/* for computer */
+@media screen and (min-width: 721px)
+{
+    .custom-button {
+        font-size: 18px;
+        padding: 14px 24px;
+    } 
+    .video iframe {
+        width: 30em; 
+        height:  30em; 
+      }
+}
+
+
+
