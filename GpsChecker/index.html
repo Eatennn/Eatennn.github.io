@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | WebGL Test AR</title>
+    <p id="demo"></p>
     <script src="js/lib/aframe.min.js"></script>
     <script src="js/lib/aframe-ar.js"></script>
     <script src="Build/UnityLoader.js"></script>
@@ -23,8 +24,11 @@
             x.innerHTML="Latitude: " + position.coords.latitude + 
             "<br>Longitude: " + position.coords.longitude;
         }
+
+  
     </script>
     <button onclick="getLocation()">Try It</button>
+    <p><b>This text is bold</b></p>
   </head>
 
   <body style="margin: 0px; overflow: hidden;">
