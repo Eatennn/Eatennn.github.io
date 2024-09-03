@@ -1,4 +1,4 @@
-const unityInstance = UnityLoader.instantiate("unityContainer", "Build/3_9_2024.json");
+const unityInstance = UnityLoader.instantiate("unityContainer", "Build/GpsChecker.json");
 let isCameraReady = false;
 let isDetectionManagerReady = false;
 let gl = null;
