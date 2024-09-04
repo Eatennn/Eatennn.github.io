@@ -23,6 +23,8 @@
         function showPosition(position) {
             x.innerHTML="Latitude: " + position.coords.latitude + 
             "<br>Longitude: " + position.coords.longitude;
+            unityInstance.SendMessage('GPSLocation','SetLat', position.coords.latitude);
+            unityInstance.SendMessage('GPSLocation','SetLong', position.coords.longitude);
         }
 
   
