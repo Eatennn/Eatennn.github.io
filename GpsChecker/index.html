@@ -4,39 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | WebGL Test AR</title>
-    <p style="text-align:center;" id="demo"></p>
     <script src="js/lib/aframe.min.js"></script>
     <script src="js/lib/aframe-ar.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script src="js/app.js"></script>
-    <script>
-      const x = document.getElementById("demo");
 
-        function getLocation() {
-          if (navigator.geolocation) {
-            navigator.geolocation.watchPosition(showPosition);
-          } else { 
-            x.innerHTML = "Geolocation is not supported by this browser.";
-          }
-        }
-    
-        function showPosition(position) {
-            x.innerHTML="Latitude: " + position.coords.latitude + 
-            "<br>Longitude: " + position.coords.longitude;
-            unityInstance.SendMessage('GPSLocation','SetLat', position.coords.latitude);
-            unityInstance.SendMessage('GPSLocation','SetLong', position.coords.longitude);
-            unityInstance.SendMessage('GPSLocation','SpawnDeco');
-        }
-
-  
-    </script>
-    <button onclick="getLocation()">Try It</button>
-    <p><b>This text is bold</b></p>
   </head>
 
-  <body onload="getLocation()" style="margin: 0px; overflow: hidden;">
-    
-
+  <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded arjs vr-mode-ui="enabled: false" copycanvas>
       <div id="unityContainer" style="z-index: 2" ></div>
       <!-- <a-marker preset="hiro"> <a-box></a-box> </a-marker> -->
@@ -46,7 +21,7 @@
 			<a-marker type="pattern" url="data/markers\Hiro.patt" markercontroller="name : Hiro"></a-marker>
 			<a-marker type="pattern" url="data/markers\Nutty.patt" markercontroller="name : Nutty"></a-marker>
 			<a-marker type="pattern" url="data/markers\NuttyCardboard.patt" markercontroller="name : NuttyCardboard"></a-marker>
-        
+
       <a-entity camera cameratransform></a-entity>
     </a-scene>
   </body>
