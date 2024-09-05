@@ -25,7 +25,7 @@
             "<br>Longitude: " + position.coords.longitude;
             unityInstance.SendMessage('GPSLocation','SetLat', position.coords.latitude);
             unityInstance.SendMessage('GPSLocation','SetLong', position.coords.longitude);
-             unityInstance.SendMessage('GPSLocation','SpawnDeco', position.coords.longitude,position.coords.latitude);
+            unityInstance.SendMessage('GPSLocation','SpawnDeco');
         }
 
   
