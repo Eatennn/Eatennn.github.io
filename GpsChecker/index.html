@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | WebGL Test AR</title>
-     <!--<p style="text-align:center;" id="demo"></p>-->
+    <!--<p style="text-align:center;" id="demo"></p>-->
     <script src="js/lib/aframe.min.js"></script>
     <script src="js/lib/aframe-ar.js"></script>
     <script src="Build/UnityLoader.js"></script>
@@ -21,8 +21,7 @@
         }
     
         function showPosition(position) {
-            x.innerHTML="Latitude: " + position.coords.latitude + 
-            "<br>Longitude: " + position.coords.longitude;
+            
             unityInstance.SendMessage('GPSLocation','SetLat', position.coords.latitude);
             unityInstance.SendMessage('GPSLocation','SetLong', position.coords.longitude);
             unityInstance.SendMessage('GPSLocation','SpawnDeco');
@@ -32,6 +31,7 @@
     </script>
     <button onclick="getLocation()">Try It</button>
       <!-- <p><b>This text is bold</b></p> -->
+      <!-- x.innerHTML="Latitude: " + position.coords.latitude +  "<br>Longitude: " + position.coords.longitude; -->
   </head>
 
   <body onload="getLocation()" style="margin: 0px; overflow: hidden;">
