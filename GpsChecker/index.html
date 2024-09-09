@@ -21,7 +21,6 @@
         }
     
         function showPosition(position) {
-            
             unityInstance.SendMessage('GPSLocation','SetLat', position.coords.latitude);
             unityInstance.SendMessage('GPSLocation','SetLong', position.coords.longitude);
             unityInstance.SendMessage('GPSLocation','SpawnDeco');
@@ -29,7 +28,7 @@
 
   
     </script>
-    <button onclick="getLocation()">Try It</button>
+    <div> onclick="getLocation()">Try It</div>>
       <!-- <p><b>This text is bold</b></p> -->
       <!-- x.innerHTML="Latitude: " + position.coords.latitude +  "<br>Longitude: " + position.coords.longitude; -->
   </head>
