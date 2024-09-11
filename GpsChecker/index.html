@@ -22,11 +22,9 @@
 
         var options = { enableHighAccuracy: true, maximumAge: 100, timeout: 50000 };
         if( navigator.geolocation) {
-           var watchID = navigator.geolocation.watchPosition( showPosition, gotErr, options );
+           var watchID = navigator.geolocation.watchPosition( showPosition, options );
            var timeout = setTimeout( function() { navigator.geolocation.clearWatch( watchID ); }, 5000 );
-        } else {
-           gotErr();
-        }
+        } 
     
         function showPosition(position) {
             unityInstance.SendMessage('GPSLocation','SetLat', position.coords.latitude);
